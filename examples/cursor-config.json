@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "rapidchart": {
+      "command": "python",
+      "args": ["-m", "rapidchart_mcp"],
+      "env": {
+        "RAPIDCHART_API_TOKEN": "rc_your_token_here",
+        "RAPIDCHART_API_URL": "https://fastuml-0bb6938ba599.herokuapp.com",
+        "RAPIDCHART_DEFAULT_TYPE": "general",
+        "RAPIDCHART_FEW_PROMPTS": "false",
+        "RAPIDCHART_GUIDELINES": "true"
+      }
+    }
+  }
+}
+
