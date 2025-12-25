@@ -10,7 +10,7 @@ pip install rapidchart-mcp
 
 Or install from GitHub:
 ```bash
-pip install git+https://github.com/rapidchart/rapidchart-mcp.git
+pip install git+https://github.com/Samicostox/rapidchart-mcp.git
 ```
 
 ### 2. Get Your API Token
