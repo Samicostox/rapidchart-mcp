@@ -115,6 +115,23 @@ pytest
 python -m rapidchart_mcp
 ```
 
+## Known Issues
+
+### 503 Timeout on Diagram Creation
+
+**Symptom:** You get a `503 Service Unavailable` error, but the diagram is created successfully.
+
+**Cause:** Heroku has a 30-second router timeout. Complex diagrams can take 30-60+ seconds to generate.
+
+**Solution:**
+1. The diagram IS being created despite the error
+2. Run `list_diagrams` to see your newly created diagram
+3. This is a Heroku limitation, not a bug in RapidChart
+
+**Workaround:** Use simpler code or smaller diagrams for faster generation.
+
+---
+
 ## License
 
 MIT

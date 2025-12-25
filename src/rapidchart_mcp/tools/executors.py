@@ -180,6 +180,24 @@ async def execute_create_diagram(
                 isError=True
             )
         
+        if "503" in error_msg or "timeout" in error_msg.lower() or "service unavailable" in error_msg.lower():
+            return types.CallToolResult(
+                content=[
+                    types.TextContent(
+                        type="text",
+                        text=f"⚠️ Request timeout (503 Service Unavailable)\n\n"
+                             f"The diagram is likely still being generated in the background.\n"
+                             f"This happens because AI generation can take longer than Heroku's 30s router limit.\n\n"
+                             f"✅ What to do:\n"
+                             f"1. Run 'list_diagrams' to check if your diagram was created\n"
+                             f"2. The most recent diagram should be yours\n"
+                             f"3. If not there yet, wait 10-20 seconds and check again\n\n"
+                             f"💡 This is a known limitation with Heroku's infrastructure."
+                    )
+                ],
+                isError=False  # Not actually an error, diagram is likely created
+            )
+        
         return types.CallToolResult(
             content=[types.TextContent(type="text", text=f"❌ Error: {error_msg}")],
             isError=True
