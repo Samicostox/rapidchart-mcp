@@ -20,7 +20,7 @@ pip install rapidchart-mcp
 Or install from source:
 
 ```bash
-git clone https://github.com/rapidchart/rapidchart-mcp.git
+git clone https://github.com/Samicostox/rapidchart-mcp.git
 cd rapidchart-mcp
 pip install -e .
 ```
@@ -122,6 +122,6 @@ MIT
 ## Support
 
 - 📧 Email: hello@rapidchart.com
-- 🐛 Issues: [GitHub Issues](https://github.com/rapidchart/rapidchart-mcp/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/Samicostox/rapidchart-mcp/issues)
 - 📖 Docs: [docs.rapidchart.com](https://docs.rapidchart.com)
 

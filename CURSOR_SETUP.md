@@ -202,6 +202,6 @@ User: "Generate diagram with deep thinking enabled"
 ## Support
 
 - 📧 Email: hello@rapidchart.com
-- 🐛 Issues: [GitHub Issues](https://github.com/rapidchart/rapidchart-mcp/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/Samicostox/rapidchart-mcp/issues)
 - 📖 Docs: [docs.rapidchart.com](https://docs.rapidchart.com/mcp)
 

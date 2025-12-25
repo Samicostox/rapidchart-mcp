@@ -16,7 +16,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://rapidchart.com"
-Repository = "https://github.com/rapidchart/rapidchart-mcp"
+Repository = "https://github.com/Samicostox/rapidchart-mcp"
 Documentation = "https://docs.rapidchart.com/mcp"
 
 [project.scripts]
