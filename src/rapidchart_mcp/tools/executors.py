@@ -149,17 +149,19 @@ async def execute_create_diagram(
             guidelines=guidelines
         )
         
+        message = result.get('message', '')
         return types.CallToolResult(
             content=[
                 types.TextContent(
                     type="text",
-                    text=f"✅ Diagram created successfully!\n\n"
+                    text=f"✅ Diagram created!\n\n"
+                         f"{message}\n\n"
                          f"Title: {result['title']}\n"
                          f"Type: {result['type']}\n"
                          f"Model: {result.get('model_used', 'N/A')}\n"
                          f"UUID: {result['uuid']}\n"
                          f"URL: {result['url']}\n\n"
-                         f"Open in browser: {result['url']}"
+                         f"🔗 Open: {result['url']}"
                 )
             ]
         )
@@ -242,15 +244,16 @@ async def execute_update_diagram(
     try:
         result = await client.update_diagram(diagram_id, code, prompt, model_id)
         
+        message = result.get('message', '')
         return types.CallToolResult(
             content=[
                 types.TextContent(
                     type="text",
-                    text=f"✅ Diagram updated successfully!\n\n"
+                    text=f"✅ Diagram update started!\n\n"
+                         f"{message}\n\n"
                          f"Title: {result['title']}\n"
                          f"UUID: {result['uuid']}\n"
-                         f"URL: {result['url']}\n\n"
-                         f"{result.get('message', '')}"
+                         f"URL: {result['url']}"
                 )
             ]
         )
